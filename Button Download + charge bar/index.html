@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="estilos.css">
+    <title>Download Charge Bar</title>
+</head>
+<body>
+    <div class="button">
+        <div class="content">
+            <i class=" bx bx-cloud-download"></i>
+                <span class="button-text">
+                    Descargar
+                </span>
+        </div>
+    </div>
+
+    <script>
+        let button = document.querySelector(".button")
+        button.addEventListener("click" , () => {
+            button.classList.add("active");
+
+            setTimeout(()=>{
+
+                button.classList.remove("active");
+                document.querySelector("i").classList.replace("bx-cloud-download" , "bx-check-circle")
+                document.querySelector(".button-text").innerText = "Completed";
+            },6000) //1s = 1000ms
+        })
+
+    </script>
+</body>
+</html>
